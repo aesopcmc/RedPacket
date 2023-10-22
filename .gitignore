@@ -42,6 +42,6 @@
 *.iml
 *.ipr
 *.iws
-.idea/*
+/.idea
 
 # Project Stuff
