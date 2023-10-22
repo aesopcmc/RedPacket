@@ -273,7 +273,17 @@ class FakePlayer implements Player {
     }
 
     @Override
+    public void playSound(Entity entity, String s, float v, float v1) {
+
+    }
+
+    @Override
     public void playSound(Entity entity, Sound sound, SoundCategory category, float volume, float pitch) {
+
+    }
+
+    @Override
+    public void playSound(Entity entity, String s, SoundCategory soundCategory, float v, float v1) {
 
     }
 
@@ -347,6 +357,11 @@ class FakePlayer implements Player {
 
     }
 
+    @Override
+    public void sendEquipmentChange(LivingEntity livingEntity, Map<EquipmentSlot, ItemStack> map) {
+
+    }
+
 
     @Override
     public void sendSignChange(Location loc, String[] lines) throws IllegalArgumentException {
@@ -365,6 +380,21 @@ class FakePlayer implements Player {
 
     @Override
     public void sendMap(MapView map) {
+
+    }
+
+    @Override
+    public void addCustomChatCompletions(Collection<String> collection) {
+
+    }
+
+    @Override
+    public void removeCustomChatCompletions(Collection<String> collection) {
+
+    }
+
+    @Override
+    public void setCustomChatCompletions(Collection<String> collection) {
 
     }
 
@@ -1003,6 +1033,16 @@ class FakePlayer implements Player {
     @Override
     public boolean setWindowProperty(InventoryView.Property prop, int value) {
         return false;
+    }
+
+    @Override
+    public int getEnchantmentSeed() {
+        return 0;
+    }
+
+    @Override
+    public void setEnchantmentSeed(int i) {
+
     }
 
     @Override
@@ -1884,6 +1924,16 @@ class FakePlayer implements Player {
 
     @Override
     public boolean isCustomNameVisible() {
+        return false;
+    }
+
+    @Override
+    public void setVisibleByDefault(boolean b) {
+
+    }
+
+    @Override
+    public boolean isVisibleByDefault() {
         return false;
     }
 
