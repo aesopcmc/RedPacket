@@ -24,6 +24,7 @@
 
 # maven
 /target
+/out
 
 # vim
 .*.sw[a-p]

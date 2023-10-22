@@ -1,31 +1,11 @@
-import org.bukkit.DyeColor;
-import org.bukkit.Effect;
-import org.bukkit.EntityEffect;
-import org.bukkit.FluidCollisionMode;
-import org.bukkit.GameMode;
-import org.bukkit.Instrument;
-import org.bukkit.Location;
-import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
-import org.bukkit.Note;
-import org.bukkit.Particle;
-import org.bukkit.Server;
-import org.bukkit.Sound;
-import org.bukkit.SoundCategory;
-import org.bukkit.Statistic;
-import org.bukkit.WeatherType;
-import org.bukkit.World;
-import org.bukkit.WorldBorder;
+import org.bukkit.*;
 import org.bukkit.advancement.Advancement;
 import org.bukkit.advancement.AdvancementProgress;
 import org.bukkit.attribute.Attribute;
 import org.bukkit.attribute.AttributeInstance;
-import org.bukkit.block.Block;
-import org.bukkit.block.BlockFace;
-import org.bukkit.block.BlockState;
-import org.bukkit.block.PistonMoveReaction;
-import org.bukkit.block.Sign;
+import org.bukkit.block.*;
 import org.bukkit.block.data.BlockData;
+import org.bukkit.block.sign.Side;
 import org.bukkit.conversations.Conversation;
 import org.bukkit.conversations.ConversationAbandonedEvent;
 import org.bukkit.entity.Entity;
@@ -64,12 +44,11 @@ import org.bukkit.util.BoundingBox;
 import org.bukkit.util.RayTraceResult;
 import org.bukkit.util.Vector;
 
+import java.net.InetAddress;
 import java.net.InetSocketAddress;
-import java.util.Collection;
-import java.util.List;
-import java.util.Map;
-import java.util.Set;
-import java.util.UUID;
+import java.time.Duration;
+import java.time.Instant;
+import java.util.*;
 
 class FakePlayer implements Player {
 
@@ -185,6 +164,36 @@ class FakePlayer implements Player {
     @Override
     public void kickPlayer(String message) {
 
+    }
+
+    @Override
+    public BanEntry<PlayerProfile> ban(String s, Date date, String s1, boolean b) {
+        return null;
+    }
+
+    @Override
+    public BanEntry<PlayerProfile> ban(String s, Instant instant, String s1, boolean b) {
+        return null;
+    }
+
+    @Override
+    public BanEntry<PlayerProfile> ban(String s, Duration duration, String s1, boolean b) {
+        return null;
+    }
+
+    @Override
+    public BanEntry<InetAddress> banIp(String s, Date date, String s1, boolean b) {
+        return null;
+    }
+
+    @Override
+    public BanEntry<InetAddress> banIp(String s, Instant instant, String s1, boolean b) {
+        return null;
+    }
+
+    @Override
+    public BanEntry<InetAddress> banIp(String s, Duration duration, String s1, boolean b) {
+        return null;
     }
 
     @Override
@@ -343,12 +352,27 @@ class FakePlayer implements Player {
     }
 
     @Override
+    public void sendBlockChanges(Collection<BlockState> collection) {
+
+    }
+
+    @Override
     public void sendBlockChanges(Collection<BlockState> blocks, boolean suppressLightUpdates) {
 
     }
 
     @Override
     public void sendBlockDamage(Location loc, float progress) {
+
+    }
+
+    @Override
+    public void sendBlockDamage(Location location, float v, Entity entity) {
+
+    }
+
+    @Override
+    public void sendBlockDamage(Location location, float v, int i) {
 
     }
 
@@ -379,7 +403,17 @@ class FakePlayer implements Player {
     }
 
     @Override
+    public void sendBlockUpdate(Location location, TileState tileState) throws IllegalArgumentException {
+
+    }
+
+    @Override
     public void sendMap(MapView map) {
+
+    }
+
+    @Override
+    public void sendHurtAnimation(float v) {
 
     }
 
@@ -540,6 +574,16 @@ class FakePlayer implements Player {
     }
 
     @Override
+    public int getExpCooldown() {
+        return 0;
+    }
+
+    @Override
+    public void setExpCooldown(int i) {
+
+    }
+
+    @Override
     public void giveExp(int amount) {
 
     }
@@ -672,6 +716,21 @@ class FakePlayer implements Player {
     @Override
     public boolean isBanned() {
         return false;
+    }
+
+    @Override
+    public BanEntry<PlayerProfile> ban(String s, Date date, String s1) {
+        return null;
+    }
+
+    @Override
+    public BanEntry<PlayerProfile> ban(String s, Instant instant, String s1) {
+        return null;
+    }
+
+    @Override
+    public BanEntry<PlayerProfile> ban(String s, Duration duration, String s1) {
+        return null;
     }
 
     @Override
@@ -850,6 +909,16 @@ class FakePlayer implements Player {
     }
 
     @Override
+    public void sendHealthUpdate(double v, int i, float v1) {
+
+    }
+
+    @Override
+    public void sendHealthUpdate() {
+
+    }
+
+    @Override
     public boolean isHealthScaled() {
         return false;
     }
@@ -986,6 +1055,11 @@ class FakePlayer implements Player {
 
     @Override
     public void openSign(Sign sign) {
+
+    }
+
+    @Override
+    public void openSign(Sign sign, Side side) {
 
     }
 
@@ -1361,6 +1435,16 @@ class FakePlayer implements Player {
     }
 
     @Override
+    public int getNoActionTicks() {
+        return 0;
+    }
+
+    @Override
+    public void setNoActionTicks(int i) {
+
+    }
+
+    @Override
     public Player getKiller() {
         return null;
     }
@@ -1493,6 +1577,11 @@ class FakePlayer implements Player {
 
     @Override
     public void swingOffHand() {
+
+    }
+
+    @Override
+    public void playHurtAnimation(float v) {
 
     }
 
@@ -1935,6 +2024,11 @@ class FakePlayer implements Player {
     @Override
     public boolean isVisibleByDefault() {
         return false;
+    }
+
+    @Override
+    public Set<Player> getTrackedBy() {
+        return null;
     }
 
     @Override

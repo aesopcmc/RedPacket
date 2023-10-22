@@ -6,7 +6,7 @@
 
     <groupId>sandtechnology.redpacket</groupId>
     <artifactId>RedPacket</artifactId>
-    <version>1.5.7</version>
+    <version>1.5.7-aesopbuild-1.1</version>
     <packaging>jar</packaging>
 
     <name>RedPacket</name>
@@ -87,10 +87,10 @@
     </build>
 
     <repositories>
-       <!-- <repository>
+        <repository>
             <id>spigot-repo</id>
             <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
-        </repository>-->
+        </repository>
         <repository>
             <id>jitpack.io</id>
             <url>https://jitpack.io</url>
@@ -137,7 +137,7 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.19.3-R0.1-SNAPSHOT</version>
+            <version>1.20.2-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
     </dependencies>
